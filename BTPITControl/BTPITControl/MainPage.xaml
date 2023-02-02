@@ -1,0 +1,156 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="BTPITControl.MainPage">
+
+    <StackLayout
+        Orientation="Horizontal"
+        Padding="0">
+
+        <StackLayout
+            x:Name="welcomForm"
+            IsVisible="true">
+
+            <Frame BackgroundColor="#2196F3" Padding="24" CornerRadius="0">
+                <Label Text="Добро пожаловать в БТПИТ" HorizontalTextAlignment="Center" TextColor="White" FontSize="36"/>
+            </Frame>
+            <Label Text="Это приложение разработано студентами этого техникума, для студентов и преподователей" FontSize="Title" Padding="20,10,10,10"/>
+            <Label Text="Любая помощь в разарботке этого приложения приветствуется." FontSize="16" Padding="20,0,10,0"/>
+            <Button x:Name="ButtonNext" Pressed="Button_Pressed" Text="Далее" Padding="0,20,0,20" Margin="40,80,40,40"/>
+            <StackLayout
+                Orientation="Horizontal"
+                Margin="12,150">
+                <CheckBox x:Name="checkBoxIsWelcom" Color="#2196F3"/>
+                <Label Padding="0,6,0,0" Text="Не показывать снова"/>
+            </StackLayout>
+
+        </StackLayout>
+
+        <StackLayout
+            x:Name="mainForm"
+            IsVisible="false"
+            Orientation="Vertical"
+            HorizontalOptions="FillAndExpand">
+
+            <Frame BackgroundColor="#2196F3" Margin="0" HorizontalOptions="FillAndExpand" Padding="24" CornerRadius="0">
+                <Label x:Name="labelTitl" Text="Расписание ПН" HorizontalTextAlignment="Center" TextColor="White" FontSize="36"/>
+            </Frame>
+
+            <Frame BackgroundColor="#404040" Margin="0" HorizontalOptions="FillAndExpand" Padding="0" CornerRadius="0">
+                <StackLayout
+                Orientation="Vertical">
+
+                    <StackLayout
+                        Orientation="Horizontal"
+                        Padding="10,0,10,10">
+                        <Label FontSize="16" 
+                               HorizontalOptions="StartAndExpand" 
+                               TextColor="#2196F3"  
+                               Text="№"/>
+                        <Label FontSize="16" 
+                               HorizontalOptions="CenterAndExpand" 
+                               TextColor="#2196F3"  
+                               Text="Пара"/>
+                        <Label FontSize="16" 
+                               HorizontalOptions="EndAndExpand"
+                               TextColor="#2196F3"  
+                               Text="Время"/>
+
+                    </StackLayout>
+
+                    <StackLayout
+                        Orientation="Horizontal"
+                        Padding="10,0,10,10">
+                        <Label FontSize="16" 
+                               VerticalOptions="Center" 
+                               HorizontalOptions="StartAndExpand" 
+                               TextColor="White"  
+                               Text="1"/>
+                        <Label x:Name="name1"
+                               FontSize="16" 
+                               HorizontalOptions="CenterAndExpand" 
+                               TextColor="White"                                 
+                               WidthRequest="220"
+                               Text="пусто"/>
+                        <Label FontSize="16" 
+                               TextColor="White"
+                               HorizontalOptions="End" 
+                               VerticalOptions="Center" 
+                               Text="9:10-10:45"/>
+                    </StackLayout>
+                    <StackLayout
+                        Orientation="Horizontal"
+                        Padding="10,0,10,10">
+                        <Label FontSize="16" 
+                               VerticalOptions="Center" 
+                               HorizontalOptions="StartAndExpand" 
+                               TextColor="White"  
+                               Text="2"/>
+                        <Label x:Name="name2"
+                               FontSize="16" 
+                               HorizontalOptions="CenterAndExpand" 
+                               TextColor="White"                                 
+                               WidthRequest="220"
+                               Text="пусто"/>
+                        <Label FontSize="16" 
+                               TextColor="White"
+                               HorizontalOptions="End" 
+                               VerticalOptions="Center" 
+                               Text="10:55-12:30"/>
+                    </StackLayout>
+                    <StackLayout
+                        Orientation="Horizontal"
+                        Padding="10,0,10,10">
+                        <Label FontSize="16" 
+                               VerticalOptions="Center" 
+                               HorizontalOptions="StartAndExpand" 
+                               TextColor="White"  
+                               Text="3"/>
+                        <Label x:Name="name3"
+                               FontSize="16" 
+                               HorizontalOptions="CenterAndExpand" 
+                               TextColor="White"                                 
+                               WidthRequest="220"
+                               Text="пусто"/>
+                        <Label FontSize="16" 
+                               TextColor="White"
+                               HorizontalOptions="End" 
+                               VerticalOptions="Center" 
+                               Text="12:45-14:20"/>
+                    </StackLayout>
+                    <StackLayout
+                        Orientation="Horizontal"
+                        Padding="10,0,10,10">
+                        <Label FontSize="16" 
+                               VerticalOptions="Center" 
+                               HorizontalOptions="StartAndExpand" 
+                               TextColor="White"  
+                               Text="4"/>
+                        <Label x:Name="name4"
+                               FontSize="16" 
+                               HorizontalOptions="CenterAndExpand" 
+                               TextColor="White"                                 
+                               WidthRequest="220"
+                               Text="пусто"/>
+                        <Label FontSize="16" 
+                               TextColor="White"
+                               HorizontalOptions="End" 
+                               VerticalOptions="Center" 
+                               Text="14:30-16:05"/>
+                    </StackLayout>
+                </StackLayout>
+            </Frame>
+
+            <StackLayout
+                Padding="5,120,5,0"
+                Orientation="Horizontal">
+                <Button Clicked="ButtonPreviousDay" Text="&lt;" />
+                <Button Clicked="ButtonNextDay" HorizontalOptions="EndAndExpand"  Text=">" />
+            </StackLayout>
+            
+            
+        </StackLayout>
+        
+    </StackLayout>
+
+</ContentPage>
